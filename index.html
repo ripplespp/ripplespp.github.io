@@ -73,7 +73,7 @@
     </header>
     <div class="entry">
       
-        <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>hexo是台湾的学生<a href="https://twitter.com/tommy351" target="_blank" rel="external">tommy351</a>开发的基于Node.js的静态博客程序,它可以帮助用户快速地搭建自己的网站,非常得方便.</p>
+        <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>hexo是台湾的学生<a href="https://twitter.com/tommy351" target="_blank" rel="external">tommy351</a>开发的基于Node.js的静态博客程序,它可以帮助用户快速地搭建自己的网站,非常方便.</p>
 <h2 id="环境配置-本文基于Mac"><a href="#环境配置-本文基于Mac" class="headerlink" title="环境配置(本文基于Mac)"></a>环境配置(本文基于Mac)</h2><ul>
 <li><p>安装<a href="https://nodejs.org/" target="_blank" rel="external">Node.js</a></p>
 </li>
@@ -85,7 +85,7 @@
 </li>
 </ul>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g hexo</span><br></pre></td></tr></table></figure>
-<p>若在后面的过程中出现以下报错信息:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123; [Error: Cannot find module <span class="string">'./build/Release/DTraceProviderBindings'</span>] code: <span class="string">'MODULE_NOT_FOUND'</span> &#125;    </span><br><span class="line">&#123; [Error: Cannot find module <span class="string">'./build/default/DTraceProviderBindings'</span>] code: <span class="string">'MODULE_NOT_FOUND'</span> &#125;</span><br><span class="line">&#123; [Error: Cannot find module <span class="string">'./build/Debug/DTraceProviderBindings'</span>] code: <span class="string">'MODULE_NOT_FOUND'</span> &#125;</span><br></pre></td></tr></table></figure></p>
+<p>若在后面的过程中出现以下报错信息:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;[Error:Cannot find module<span class="string">'./build/Release/DTraceProviderBindings'</span>]code:<span class="string">'MODULE_NOT_FOUND'</span>&#125;    </span><br><span class="line">&#123;[Error:Cannot find module<span class="string">'./build/default/DTraceProviderBindings'</span>]code:<span class="string">'MODULE_NOT_FOUND'</span>&#125;</span><br><span class="line">&#123;[Error:Cannot find module<span class="string">'./build/Debug/DTraceProviderBindings'</span>]code:<span class="string">'MODULE_NOT_FOUND'</span>&#125;</span><br></pre></td></tr></table></figure></p>
 <p>则需要运行以下命令来安装:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo --no-optional</span><br></pre></td></tr></table></figure></p>
 <p>至此,需要的环境已经配置完成了.</p>
 <h2 id="搭建一个本地的网站"><a href="#搭建一个本地的网站" class="headerlink" title="搭建一个本地的网站"></a>搭建一个本地的网站</h2><p>首先可以切换到自己的工作目录,例如我是在/…/myhexo下进行操作的.</p>
@@ -93,7 +93,7 @@
 <p>然后在浏览器中打开<a href="http://localhost:4000" target="_blank" rel="external">http://localhost:4000</a>可以看到一个默认配置的网站,不过这个网站只能在本地打开.接下来要做的就是把它部署到服务器了.</p>
 <h2 id="将网站部署到服务器"><a href="#将网站部署到服务器" class="headerlink" title="将网站部署到服务器"></a>将网站部署到服务器</h2><ul>
 <li><p>如果你是GitHub新手,可以通过这个官方提供的<a href="https://guides.github.com/activities/hello-world/" target="_blank" rel="external">HELLO WORLD</a>熟悉一下GitHub的基本操作.</p>
-<p>初步了解基本的操作后,点击你主页右上角的加号, create 一个 Repository .在 Repository name下面填写 username.github.io,这里的username就是你GitHub的用户名,不能自定义!</p>
+<p>初步了解基本的操作后,点击你主页右上角的加号, 创建(Create)一个 Repository .在 Repository name下面填写 username.github.io,这里的username就是你GitHub的用户名,不能自定义!</p>
 <p>接下来打开用编辑器你工作目录里的 _config.yml 文件,在最下面的 “deploy:” 下填写以下内容:<br>type: git<br>respository: <a href="https://githun.com/username/username.GitHub.io.git" target="_blank" rel="external">https://githun.com/username/username.GitHub.io.git</a><br>branch: master<br>(其中的username即为你GitHub的用户名)<br>(注意!这三个地方的冒号: 后面都是要有一个空格的,这是yaml的语法要求)</p>
 </li>
 </ul>
@@ -111,7 +111,7 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
-<p>可以简写为:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo c</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure></p>
+<p>hexo generate和hexo deploy可以简写为:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure></p>
 <p>然后打开 username.github.io,属于你的网站就搭建完成了.</p>
 
       
