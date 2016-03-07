@@ -7,7 +7,7 @@
   <meta name="author" content="暗夜面包">
   
   <meta name="description" content="简介hexo是台湾的学生tommy351开发的基于Node.js的静态博客程序,它可以帮助用户快速地搭建自己的网站,非常得方便.
-环境配置
+环境配置(本文是基于Mac的,其他系统尚未测试)
 安装Node.js
 
 安装Git(若已经下载了xcode则可以略去此步骤)
@@ -17,8 +17,7 @@ GitHub帐号
 安装Hexo
 
 
-1$ npm install hexo
-若在">
+1$">
   
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -52,7 +51,7 @@ GitHub帐号
     
       <li><a href="/">首页</a></li>
     
-      <li><a href="http://www.douban.com/people/Zetsue/">douban</a></li>
+      <li><a href="https://github.com/ripplespp">GitHub</a></li>
     
   </ul>
   <div class="clearfix"></div>
@@ -87,7 +86,7 @@ GitHub帐号
     <div class="entry">
       
         <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>hexo是台湾的学生<a href="https://twitter.com/tommy351" target="_blank" rel="external">tommy351</a>开发的基于Node.js的静态博客程序,它可以帮助用户快速地搭建自己的网站,非常得方便.</p>
-<h2 id="环境配置"><a href="#环境配置" class="headerlink" title="环境配置"></a>环境配置</h2><ul>
+<h2 id="环境配置-本文是基于Mac的-其他系统尚未测试"><a href="#环境配置-本文是基于Mac的-其他系统尚未测试" class="headerlink" title="环境配置(本文是基于Mac的,其他系统尚未测试)"></a>环境配置(本文是基于Mac的,其他系统尚未测试)</h2><ul>
 <li><p>安装<a href="https://nodejs.org/" target="_blank" rel="external">Node.js</a></p>
 </li>
 <li><p>安装Git(若已经下载了xcode则可以略去此步骤)</p>
@@ -97,8 +96,8 @@ GitHub帐号
 <li><p>安装Hexo</p>
 </li>
 </ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo</span><br></pre></td></tr></table></figure>
-<p>若在后面的过程中出现以下报错信息:<br>{ [Error: Cannot find module ‘./build/Release/DTraceProviderBindings’] code: ‘MODULE_NOT_FOUND’ }<br>{ [Error: Cannot find module ‘./build/default/DTraceProviderBindings’] code: ‘MODULE_NOT_FOUND’ }<br>{ [Error: Cannot find module ‘./build/Debug/DTraceProviderBindings’] code: ‘MODULE_NOT_FOUND’ }</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g hexo</span><br></pre></td></tr></table></figure>
+<p>若在后面的过程中出现以下报错信息:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123; [Error: Cannot find module <span class="string">'./build/Release/DTraceProviderBindings'</span>] code: <span class="string">'MODULE_NOT_FOUND'</span> &#125;    </span><br><span class="line">&#123; [Error: Cannot find module <span class="string">'./build/default/DTraceProviderBindings'</span>] code: <span class="string">'MODULE_NOT_FOUND'</span> &#125;</span><br><span class="line">&#123; [Error: Cannot find module <span class="string">'./build/Debug/DTraceProviderBindings'</span>] code: <span class="string">'MODULE_NOT_FOUND'</span> &#125;</span><br></pre></td></tr></table></figure></p>
 <p>则需要运行以下命令来安装:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo --no-optional</span><br></pre></td></tr></table></figure></p>
 <p>至此,需要的环境已经配置完成了.</p>
 <h2 id="搭建一个本地的网站"><a href="#搭建一个本地的网站" class="headerlink" title="搭建一个本地的网站"></a>搭建一个本地的网站</h2><p>首先可以切换到自己的工作目录,例如我是在/…/myhexo下进行操作的.</p>
@@ -133,17 +132,16 @@ GitHub帐号
       
 
         
-        
-          <div class="alignright post-nav">
-            <em>下一篇: </em><a href="/2016/03/07/hello-world/">Hello World</a>
+          <div class="alignleft post-nav">
+            <em>上一篇: </em><a href="/2016/03/07/hello-world/">Hello World</a>
           </div>
-          <div class="clearfix"></div>
+        
         
 
         
           <div class="copyright">
             
-              <span class="claim">版权声明：自由转载-非商用-无演绎-保持署名 @ Creative Commons BY-NC-ND 3.0</span>
+              <span class="claim">版权声明：禁止转载 @ Creative Commons BY-NC-ND 3.0</span>
             
             
               <span class="from-link">
@@ -168,7 +166,7 @@ GitHub帐号
     <aside id="sidebar" class="alignright">
   <div class="search">
   <form action="//google.com/search" method="get" accept-charset="utf-8">
-    <input type="text" name="q" results="0" placeholder="Suche">
+    <input type="text" name="q" results="0" placeholder="Поиск">
     <i class="icon-search"></i>
     <input type="hidden" name="q" value="site:yoursite.com">
   </form>
@@ -182,11 +180,11 @@ GitHub帐号
   <ul class="entry">
     
       <li>
-        <a href="/2016/03/07/hexo-github/">hexo&amp;github搭建个人网站</a>
+        <a href="/2016/03/07/hello-world/">Hello World</a>
       </li>
     
       <li>
-        <a href="/2016/03/07/hello-world/">Hello World</a>
+        <a href="/2016/03/07/hexo-github/">hexo&amp;github搭建个人网站</a>
       </li>
     
   </ul>
