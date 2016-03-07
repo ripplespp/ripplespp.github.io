@@ -73,7 +73,7 @@
     </header>
     <div class="entry">
       
-        <p>hexo是台湾的学生<a href="https://twitter.com/tommy351" target="_blank" rel="external">tommy351</a>开发的基于Node.js的静态博客程序,其编译速度非常快.</p>
+        <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>hexo是台湾的学生<a href="https://twitter.com/tommy351" target="_blank" rel="external">tommy351</a>开发的基于Node.js的静态博客程序,其编译速度非常快.</p>
 <h2 id="环境配置"><a href="#环境配置" class="headerlink" title="环境配置"></a>环境配置</h2><ul>
 <li><p>安装<a href="https://nodejs.org/" target="_blank" rel="external">Node.js</a></p>
 </li>
@@ -86,6 +86,27 @@
 </ul>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo</span><br></pre></td></tr></table></figure>
 <p>至此,需要的环境已经配置完成了.</p>
+<h2 id="用Hexo搭建一个可以本地访问的网站"><a href="#用Hexo搭建一个可以本地访问的网站" class="headerlink" title="用Hexo搭建一个可以本地访问的网站"></a>用Hexo搭建一个可以本地访问的网站</h2><p>首先可以切换到自己的工作目录,例如我是在/…/myhexo下进行操作的.</p>
+<p>-启动本地服务<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure></p>
+<p>然后在浏览器中打开<a href="http://localhost:4000" target="_blank" rel="external">http://localhost:4000</a>可以看到一个默认配置的网站,不过这个网站只能在本地打开.接下来要做的就是把它部署到服务器了.</p>
+<h2 id="将网站部署到服务器"><a href="#将网站部署到服务器" class="headerlink" title="将网站部署到服务器"></a>将网站部署到服务器</h2><ul>
+<li><p>如果你是GitHub新手,可以通过这个官方提供的<a href="https://guides.github.com/activities/hello-world/" target="_blank" rel="external">HELLO WORLD</a>熟悉一下GitHub的基本操作.</p>
+<p>初步了解基本的操作后我们接着刚刚的话题,首先点击你主页右上角的加号,creat一个Repository.在Repository name下面填写 username.github.io,这里的username就是你GitHub的用户名,而且只能写用户名,不能自定义!</p>
+<p>接下来打开用编辑器你工作目录里的 _config.yml 文件,在最下面的 “deploy:” 下填写以下内容:<br>type: git<br>respository: <a href="https://githun.com/username/username.GitHub.io.git(其中的username即为你GitHub的用户名" target="_blank" rel="external">https://githun.com/username/username.GitHub.io.git(其中的username即为你GitHub的用户名</a>)<br>branch: master<br>(注意!这三个地方的冒号: 后面都是要有一个空格的,这是yaml的语法要求)</p>
+</li>
+</ul>
+<ul>
+<li>然后,如果你刚刚的 hexo server 还在运行的话要先 crl+z 终止,然后我们输入以下命令来将我们本地的网站部署到GitHub上.</li>
+</ul>
+<ol>
+<li><p>清除本地的缓存</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo clean</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>生成所需的文件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br><span class="line"></span><br><span class="line">3. 部署</span><br><span class="line">``` bash</span><br><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>然后打开 username.github.io,属于你的网站就搭建完成了.</p>
 
       
     </div>
